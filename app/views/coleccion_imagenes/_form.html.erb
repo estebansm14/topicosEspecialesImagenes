@@ -1,0 +1,32 @@
+<%= form_with(model: coleccion_imagene, local: true) do |form| %>
+  <% if coleccion_imagene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coleccion_imagene.errors.count, "error") %> prohibited this coleccion_imagene from being saved:</h2>
+
+      <ul>
+      <% coleccion_imagene.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :coleccion_imagene_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :coleccion_imagene_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.text_field :categoria, id: :coleccion_imagene_categoria %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

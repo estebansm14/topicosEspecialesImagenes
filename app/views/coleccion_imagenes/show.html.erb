@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @coleccion_imagene.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @coleccion_imagene.descripcion %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @coleccion_imagene.categoria %>
+</p>
+
+<%= link_to 'Edit', edit_coleccion_imagene_path(@coleccion_imagene) %> |
+<%= link_to 'Back', coleccion_imagenes_path %>

@@ -1,0 +1,2 @@
+class ColeccionImagene < ApplicationRecord
+end
