@@ -1,5 +1,6 @@
 class ColeccionImagenesController < ApplicationController
   before_action :set_coleccion_imagene, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /coleccion_imagenes
   # GET /coleccion_imagenes.json
